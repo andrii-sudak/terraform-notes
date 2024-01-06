@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "terraformStateS3Bucket" {
 }
 
 resource "aws_dynamodb_table" "terraformStateDynamodbTable" {
-  name           = "andrii-sudak-terraform-remote-state"
+  name           = "andrii-sudak_terraform_remote_state"
   hash_key       = "LockID"
   read_capacity  = 1
   write_capacity = 1
