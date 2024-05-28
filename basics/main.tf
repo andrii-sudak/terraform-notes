@@ -14,7 +14,7 @@ resource "local_file" "example_fle" {
 resource "local_file" "example_file_two" {
   filename   = "./dependent_example_file.txt"
   content    = "Some static content"
-  depends_on = [local_file.example_fle]  # Exmplicit dependence
+  depends_on = [local_file.example_fle]  # Explicit dependency
   lifecycle {
     prevent_destroy = false
   }

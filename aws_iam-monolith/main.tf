@@ -10,7 +10,7 @@ resource "aws_iam_user" "user2-iam-aws_iam_user" {
   name = "user2"
 }
 
-# HereDoc aproach
+# HereDoc approach
 # The policy description in JSON format can be found in the IAM -> Policies
 resource "aws_iam_policy" "adminUserHeredoc" {
   name   = "AdminUsersHeredoc"
@@ -28,7 +28,7 @@ resource "aws_iam_policy" "adminUserHeredoc" {
 EOF
 }
 
-# File aproach
+# File approach
 resource "aws_iam_policy" "adminUserFile" {
   name   = "AdminUsersFile"
   policy = file("admin-policy.json")
