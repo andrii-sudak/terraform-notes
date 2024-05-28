@@ -5,7 +5,7 @@ variable "example_variable" {
 
 resource "local_file" "example_fle" {
   filename = "./example_file.txt"
-  content  = var.example_variable  # Implicit dependence
+  content  = var.example_variable # Implicit dependence
   lifecycle {
     create_before_destroy = true
   }
@@ -14,7 +14,7 @@ resource "local_file" "example_fle" {
 resource "local_file" "example_file_two" {
   filename   = "./dependent_example_file.txt"
   content    = "Some static content"
-  depends_on = [local_file.example_fle]  # Explicit dependency
+  depends_on = [local_file.example_fle] # Explicit dependency
   lifecycle {
     prevent_destroy = false
   }
